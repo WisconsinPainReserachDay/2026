@@ -55,292 +55,126 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Symposium Schedule</title>
 <style>
-  :root {
-    --ink: #1f2430;
-    --muted: #5b6472;
-    --line: #e2e5ea;
-    --accent: #7a1f2b;
-    --accent-soft: #f7ecec;
-    --bg: #ffffff;
-    --time-col: 108px;
-  }
-  * { box-sizing: border-box; }
   body {
-    margin: 0;
-    padding: 40px 20px 80px;
-    background: #fafafa;
-    color: var(--ink);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    color: #222;
     line-height: 1.5;
   }
-  .program {
-    max-width: 820px;
-    margin: 0 auto;
-    background: var(--bg);
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    padding: 40px 44px;
-  }
-  .program h1 {
-    font-size: 1.5rem;
-    margin: 0 0 4px;
-    letter-spacing: 0.01em;
-  }
-  .program .subtitle {
-    color: var(--muted);
-    font-size: 0.95rem;
-    margin: 0 0 32px;
-  }
-  .slot {
-    display: grid;
-    grid-template-columns: var(--time-col) 1fr;
-    gap: 4px 20px;
-    padding: 18px 0;
-    border-top: 1px solid var(--line);
-  }
+  h1 { margin-bottom: 4px; }
+  .slot { border-top: 1px solid #ddd; padding: 16px 0; }
   .slot:first-of-type { border-top: none; }
-  .time {
-    font-weight: 600;
-    font-size: 0.95rem;
-    color: var(--accent);
-    white-space: nowrap;
-    padding-top: 2px;
-  }
-  .slot-title {
-    font-weight: 700;
-    font-size: 1.05rem;
-    margin: 0;
-  }
-  .duration {
-    font-weight: 400;
-    color: var(--muted);
-    font-size: 0.9rem;
-  }
-  .note {
-    color: var(--muted);
-    font-size: 0.92rem;
-    margin: 2px 0 0;
-  }
-  .moderator {
-    font-size: 0.9rem;
-    color: var(--muted);
-    margin: 6px 0 0;
-  }
-  .moderator strong {
-    color: var(--ink);
-    font-weight: 600;
-  }
-  .speakers {
-    list-style: none;
-    margin: 12px 0 0;
-    padding: 0;
-    display: grid;
-    gap: 14px;
-  }
-  .speaker {
-    padding: 12px 14px;
-    background: var(--accent-soft);
-    border-left: 3px solid var(--accent);
-    border-radius: 4px;
-  }
-  .speaker .name {
-    font-weight: 600;
-  }
-  .speaker .affil {
-    font-size: 0.88rem;
-    color: var(--muted);
-    margin: 1px 0 6px;
-  }
-  .speaker .talk {
-    font-style: italic;
-    font-size: 0.94rem;
-  }
-  .tag {
-    display: inline-block;
-    margin-top: 6px;
-    margin-right: 6px;
-    padding: 2px 8px;
-    border-radius: 20px;
-    background: #fff;
-    border: 1px solid var(--line);
-    font-size: 0.76rem;
-    color: var(--muted);
-    font-style: normal;
-  }
-  .break-slot .slot-title {
-    color: var(--muted);
-    font-weight: 600;
-  }
+  .time { color: #7a1f2b; font-weight: bold; }
+  .slot h2 { margin: 0 0 4px; font-size: 1.1rem; display: inline; }
+  .duration { color: #666; font-weight: normal; font-size: 0.9rem; }
+  .moderator, .note { color: #555; font-size: 0.9rem; margin: 4px 0; }
+  ul.speakers { margin: 8px 0 0; padding-left: 20px; }
+  ul.speakers li { margin-bottom: 10px; }
+  .talk { font-style: italic; }
+  .tag { color: #888; font-size: 0.85rem; }
 </style>
 </head>
 <body>
-<div class="program">
-  <h1>Symposium Program</h1>
-  <p class="subtitle">Full-day schedule</p>
 
-  <div class="slot">
-    <div class="time">8:00 AM</div>
-    <div>
-      <p class="slot-title">Coffee, Bagels, Pastries &amp; Fruit</p>
-      <p class="note">Arrival and light breakfast</p>
-    </div>
-  </div>
+<h1>Symposium Program</h1>
 
-  <div class="slot">
-    <div class="time">8:20 AM</div>
-    <div>
-      <p class="slot-title">Introduction <span class="duration">(10 min)</span></p>
-      <p class="note">Cheryl Stucky and sponsors</p>
-    </div>
-  </div>
-
-  <div class="slot">
-    <div class="time">8:30 AM</div>
-    <div>
-      <p class="slot-title">Plenary <span class="duration">(55 min)</span></p>
-      <p class="moderator"><strong>Moderator:</strong> Cheryl Stucky &ndash; Marvin Wagner Professor, MCW</p>
-      <ul class="speakers">
-        <li class="speaker">
-          <div class="name">Geoffroy Laumet, PhD</div>
-          <div class="affil">Red Cedar Distinguished Associate Professor, Michigan State University</div>
-          <div class="talk">&ldquo;Immune Disruption of the Brain&rsquo;s Lymphatic Drainage as a Driver of Migraine-like Behaviors&rdquo;</div>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="slot">
-    <div class="time">9:30 AM</div>
-    <div>
-      <p class="slot-title">Session 1 <span class="duration">(45 min)</span></p>
-      <p class="moderator"><strong>Moderator:</strong> Aaron Mickle &ndash; Associate Professor, MCW</p>
-      <ul class="speakers">
-        <li class="speaker">
-          <div class="name">Zachary T. Campbell, PhD</div>
-          <div class="affil">Betty J. Bamforth Distinguished Chair, Vice Chair for Research, Associate Professor, University of Wisconsin&ndash;Madison</div>
-          <div class="talk">&ldquo;Don&rsquo;t Be So Sensitive &mdash; Translational Control as a Source of Novel Analgesic Targets&rdquo;</div>
-        </li>
-        <li class="speaker">
-          <div class="name">Lucy Vulchanova</div>
-          <div class="affil">Associate Professor, University of Minnesota</div>
-          <div class="talk">&ldquo;Preclinical Studies of Chronic Alcohol Consumption as an Antecedent to Pain Chronification&rdquo;</div>
-        </li>
-        <li class="speaker">
-          <div class="name">Byron Hayes</div>
-          <div class="affil">Postdoctoral Fellow, Medical College of Wisconsin</div>
-          <div class="talk">&ldquo;A Novel Intranasal-Based Murine Model of Interstitial Cystitis/Bladder Pain Syndrome&rdquo;</div>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="slot break-slot">
-    <div class="time">10:20 AM</div>
-    <div>
-      <p class="slot-title">Coffee Break <span class="duration">(40 min)</span></p>
-    </div>
-  </div>
-
-  <div class="slot">
-    <div class="time">11:00 AM</div>
-    <div>
-      <p class="slot-title">Data Blitz <span class="duration">(1 hr &mdash; 6 &times; 10 min: 8 + 2 min Q&amp;A)</span></p>
-      <p class="moderator"><strong>Moderators:</strong> Hannah Anderson &ndash; Graduate Student, MCW; Bradey Stewart &ndash; Graduate Student, MCW</p>
-      <ul class="speakers">
-        <li class="speaker">
-          <div class="name">Angela Mickle</div>
-          <div class="affil">Clinical Research Coordinator III, University of Florida</div>
-          <div class="talk">&ldquo;A Quantified Biopsychosocial Assessment Helps Explain Individual Differences in Clinical Pain and Functioning in Adults with Chronic Low Back Pain&rdquo;</div>
-        </li>
-        <li class="speaker">
-          <div class="name">Mehri BagheriMohamadiPour</div>
-          <div class="affil">Research Scientist I, Medical College of Wisconsin</div>
-          <div class="talk">&ldquo;Plasma-Induced Gene Expression Modules Are Associated with Pain Frequency in Children with Sickle Cell Disease&rdquo;</div>
-        </li>
-        <li class="speaker">
-          <div class="name">Dianise Rodr&iacute;guez Garc&iacute;a</div>
-          <div class="affil">Graduate Student, Medical College of Wisconsin</div>
-          <div class="talk">&ldquo;Keratinocyte PIEZO1 Activity Contributes to Diabetic Mechanical Hypersensitivity&rdquo;</div>
-        </li>
-        <li class="speaker">
-          <div class="name">Agatha Greenway</div>
-          <div class="affil">Graduate Student, University of Iowa</div>
-          <div class="talk">&ldquo;Investigating the Sufficiency and Necessity of the Anterior Cingulate Cortex in Mouse Migraine-like Behaviors&rdquo;</div>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="slot">
-    <div class="time">12:10 PM</div>
-    <div>
-      <p class="slot-title">Lunch <span class="duration">(75 min &mdash; sessions / table topics)</span></p>
-      <p class="note">Mentored table topics for trainees</p>
-      <p class="moderator"><strong>Moderator:</strong> Jonathan Enders &ndash; Postdoctoral Fellow, Medical College of Wisconsin</p>
-    </div>
-  </div>
-
-  <div class="slot">
-    <div class="time">1:25 PM</div>
-    <div>
-      <p class="slot-title">Session 2 <span class="duration">(45 min)</span></p>
-      <p class="moderator"><strong>Moderator:</strong> Tayler Sheahan &ndash; Assistant Professor, MCW</p>
-      <ul class="speakers">
-        <li class="speaker">
-          <div class="name">Monica Gremillion</div>
-          <div class="affil">Associate Professor, Anesthesiology; Pediatric Psychologist, Children&rsquo;s Wisconsin Pain and Headache Center, Medical College of Wisconsin</div>
-          <div class="talk">&ldquo;Experiences of Pain Dismissal in Youth with Sickle Cell Disease&rdquo;</div>
-        </li>
-        <li class="speaker">
-          <div class="name">Burel Goodin</div>
-          <div class="affil">Washington University in St. Louis</div>
-          <div class="talk">&ldquo;A &lsquo;Lifestyle Medicine + Metabolic Therapeutics&rsquo; Framework for Chronic Pain Management&rdquo;</div>
-        </li>
-        <li class="speaker">
-          <div class="name">Megan McGrath</div>
-          <div class="affil">Graduate Student, Michigan State University</div>
-          <div class="talk">&ldquo;More Gain More Pain: The Relationship Between Weight and Pain Status in a Diet-Induced Model of Obesity in Mice&rdquo;</div>
-          <span class="tag">Invite sent</span>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="slot">
-    <div class="time">2:15 PM</div>
-    <div>
-      <p class="slot-title">Session 3 <span class="duration">(45 min)</span></p>
-      <p class="moderator"><strong>Moderator:</strong> Gabbie Robilotto &ndash; Graduate Student, MCW</p>
-      <ul class="speakers">
-        <li class="speaker">
-          <div class="name">Lauren Slosky, PhD</div>
-          <div class="affil">Assistant Professor of Pharmacology, University of Minnesota Medical School</div>
-          <div class="talk">&ldquo;Molecular Bumpers and Glues: Tuning GPCR&ndash;Transducer Coupling to Treat Pain and Addiction&rdquo;</div>
-        </li>
-        <li class="speaker">
-          <div class="name">John McCorvy, PhD</div>
-          <div class="affil">Associate Professor and Eminent Scholar, Medical College of Wisconsin</div>
-          <div class="talk">&ldquo;Structure-Based Design of Novel Analgesics&rdquo;</div>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="slot break-slot">
-    <div class="time">3:05 PM</div>
-    <div>
-      <p class="slot-title">Break <span class="duration">(40 min)</span></p>
-    </div>
-  </div>
-
-  <div class="slot break-slot">
-    <div class="time">3:45 PM</div>
-    <div>
-      <p class="slot-title">Poster Session <span class="duration">(90 min)</span></p>
-    </div>
-  </div>
-
+<div class="slot">
+  <span class="time">8:00 AM</span> &mdash; <h2>Coffee, Bagels, Pastries &amp; Fruit</h2>
+  <p class="note">Arrival and light breakfast</p>
 </div>
+
+<div class="slot">
+  <span class="time">8:20 AM</span> &mdash; <h2>Introduction</h2> <span class="duration">(10 min)</span>
+  <p class="note">Cheryl Stucky and sponsors</p>
+</div>
+
+<div class="slot">
+  <span class="time">8:30 AM</span> &mdash; <h2>Plenary</h2> <span class="duration">(55 min)</span>
+  <p class="moderator">Moderator: Cheryl Stucky &ndash; Marvin Wagner Professor, MCW</p>
+  <ul class="speakers">
+    <li><strong>Geoffroy Laumet, PhD</strong> &mdash; Red Cedar Distinguished Associate Professor, Michigan State University<br>
+      <span class="talk">&ldquo;Immune Disruption of the Brain&rsquo;s Lymphatic Drainage as a Driver of Migraine-like Behaviors&rdquo;</span></li>
+  </ul>
+</div>
+
+<div class="slot">
+  <span class="time">9:30 AM</span> &mdash; <h2>Session 1</h2> <span class="duration">(45 min)</span>
+  <p class="moderator">Moderator: Aaron Mickle &ndash; Associate Professor, MCW</p>
+  <ul class="speakers">
+    <li><strong>Zachary T. Campbell, PhD</strong> &mdash; Betty J. Bamforth Distinguished Chair, Vice Chair for Research, Associate Professor, University of Wisconsin&ndash;Madison<br>
+      <span class="talk">&ldquo;Don&rsquo;t Be So Sensitive &mdash; Translational Control as a Source of Novel Analgesic Targets&rdquo;</span></li>
+    <li><strong>Lucy Vulchanova</strong> &mdash; Associate Professor, University of Minnesota<br>
+      <span class="talk">&ldquo;Preclinical Studies of Chronic Alcohol Consumption as an Antecedent to Pain Chronification&rdquo;</span></li>
+    <li><strong>Byron Hayes</strong> &mdash; Postdoctoral Fellow, Medical College of Wisconsin<br>
+      <span class="talk">&ldquo;A Novel Intranasal-Based Murine Model of Interstitial Cystitis/Bladder Pain Syndrome&rdquo;</span></li>
+  </ul>
+</div>
+
+<div class="slot">
+  <span class="time">10:20 AM</span> &mdash; <h2>Coffee Break</h2> <span class="duration">(40 min)</span>
+</div>
+
+<div class="slot">
+  <span class="time">11:00 AM</span> &mdash; <h2>Data Blitz</h2> <span class="duration">(1 hr &mdash; 6 &times; 10 min: 8 + 2 min Q&amp;A)</span>
+  <p class="moderator">Moderators: Hannah Anderson &ndash; Graduate Student, MCW; Bradey Stewart &ndash; Graduate Student, MCW</p>
+  <ul class="speakers">
+    <li><strong>Angela Mickle</strong> &mdash; Clinical Research Coordinator III, University of Florida<br>
+      <span class="talk">&ldquo;A Quantified Biopsychosocial Assessment Helps Explain Individual Differences in Clinical Pain and Functioning in Adults with Chronic Low Back Pain&rdquo;</span></li>
+    <li><strong>Mehri BagheriMohamadiPour</strong> &mdash; Research Scientist I, Medical College of Wisconsin<br>
+      <span class="talk">&ldquo;Plasma-Induced Gene Expression Modules Are Associated with Pain Frequency in Children with Sickle Cell Disease&rdquo;</span></li>
+    <li><strong>Dianise Rodr&iacute;guez Garc&iacute;a</strong> &mdash; Graduate Student, Medical College of Wisconsin<br>
+      <span class="talk">&ldquo;Keratinocyte PIEZO1 Activity Contributes to Diabetic Mechanical Hypersensitivity&rdquo;</span></li>
+    <li><strong>Haley VanBeek</strong> &mdash; Resident, Medical College of Wisconsin<br>
+      <span class="talk">&ldquo;Value-Based Assessment of Lumbar Sympathetic Neurolysis: High Cost, Limited Benefit&rdquo;</span> &mdash; <span class="tag">Invite sent</span></li>
+    <li><strong>Junxi Chen</strong> &mdash; Medical Student, Medical College of Wisconsin<br>
+      <span class="talk">&ldquo;Fabry Disease Rat Model Demonstrates Pathological Changes in Corneal Nerves&rdquo;</span> &mdash; <span class="tag">corneal neuropathy in Fabry &middot; Invite sent</span></li>
+    <li><strong>Agatha Greenway</strong> &mdash; Graduate Student, University of Iowa<br>
+      <span class="talk">&ldquo;Investigating the Sufficiency and Necessity of the Anterior Cingulate Cortex in Mouse Migraine-like Behaviors&rdquo;</span></li>
+  </ul>
+</div>
+
+<div class="slot">
+  <span class="time">12:10 PM</span> &mdash; <h2>Lunch</h2> <span class="duration">(75 min &mdash; sessions / table topics)</span>
+  <p class="note">Mentored table topics for trainees</p>
+  <p class="moderator">Moderator: Jonathan Enders &ndash; Postdoctoral Fellow, Medical College of Wisconsin</p>
+</div>
+
+<div class="slot">
+  <span class="time">1:25 PM</span> &mdash; <h2>Session 2</h2> <span class="duration">(45 min)</span>
+  <p class="moderator">Moderator: Tayler Sheahan &ndash; Assistant Professor, MCW</p>
+  <ul class="speakers">
+    <li><strong>Monica Gremillion</strong> &mdash; Associate Professor, Anesthesiology; Pediatric Psychologist, Children&rsquo;s Wisconsin Pain and Headache Center, Medical College of Wisconsin<br>
+      <span class="talk">&ldquo;Experiences of Pain Dismissal in Youth with Sickle Cell Disease&rdquo;</span></li>
+    <li><strong>Burel Goodin</strong> &mdash; Washington University in St. Louis<br>
+      <span class="talk">&ldquo;A &lsquo;Lifestyle Medicine + Metabolic Therapeutics&rsquo; Framework for Chronic Pain Management&rdquo;</span></li>
+    <li><strong>Megan McGrath</strong> &mdash; Graduate Student, Michigan State University<br>
+      <span class="talk">&ldquo;More Gain More Pain: The Relationship Between Weight and Pain Status in a Diet-Induced Model of Obesity in Mice&rdquo;</span> &mdash; <span class="tag">Invite sent</span></li>
+  </ul>
+</div>
+
+<div class="slot">
+  <span class="time">2:15 PM</span> &mdash; <h2>Session 3</h2> <span class="duration">(45 min)</span>
+  <p class="moderator">Moderator: Gabbie Robilotto &ndash; Graduate Student, MCW</p>
+  <ul class="speakers">
+    <li><strong>Lauren Slosky, PhD</strong> &mdash; Assistant Professor of Pharmacology, University of Minnesota Medical School<br>
+      <span class="talk">&ldquo;Molecular Bumpers and Glues: Tuning GPCR&ndash;Transducer Coupling to Treat Pain and Addiction&rdquo;</span></li>
+    <li><strong>John McCorvy, PhD</strong> &mdash; Associate Professor and Eminent Scholar, Medical College of Wisconsin<br>
+      <span class="talk">&ldquo;Structure-Based Design of Novel Analgesics&rdquo;</span></li>
+    <li><strong>Cl&eacute;mence Gi&egrave;re</strong> &mdash; Postdoctoral Fellow, Saint Louis University<br>
+      <span class="talk">&ldquo;Failure of Descending Pain Modulation Underlies Nociplastic Pain in Systemic Lupus Erythematosus&rdquo;</span></li>
+  </ul>
+</div>
+
+<div class="slot">
+  <span class="time">3:05 PM</span> &mdash; <h2>Break</h2> <span class="duration">(40 min)</span>
+</div>
+
+<div class="slot">
+  <span class="time">3:45 PM</span> &mdash; <h2>Poster Session</h2> <span class="duration">(90 min)</span>
+</div>
+
 </body>
 </html>
 
